@@ -1,0 +1,21 @@
+<div class="form-container">
+    <form (submit)="addStudent()">
+           <mat-form-field class="full-width" appearence="outline">
+            <mat-label style="color: black ;font-family:Georgia, 'Times New Roman', Times, serif;font-size: large;">UserName</mat-label>
+            <input matInput type="text" [(ngModel)]="username"  [ngModelOptions]="{standalone: true}" />         
+           </mat-form-field> 
+           <mat-form-field class="full-width" appearence="outline">
+            <mat-label style="color: black ;font-family:Georgia, 'Times New Roman', Times, serif;font-size: large;">Contact</mat-label>
+            <input matInput type="text" [(ngModel)]="contact"  [ngModelOptions]="{standalone: true}" />         
+           </mat-form-field> 
+           <mat-form-field class="full-width" appearence="outline">
+            <mat-label style="color: black ;font-family:Georgia, 'Times New Roman', Times, serif;font-size: large;">Email</mat-label>
+            <input matInput type="text" [(ngModel)]="email"  [ngModelOptions]="{standalone: true}" />         
+           </mat-form-field> 
+           <mat-form-field class="full-width" appearence="outline">
+            <mat-label style="color: black ;font-family:Georgia, 'Times New Roman', Times, serif;font-size: large;">Password</mat-label>
+            <input matInput type="text" [(ngModel)]="password"  [ngModelOptions]="{standalone: true}" />         
+           </mat-form-field>
+        <button mat-raised-button color="primary" (click)=" addStudent()">submit</button>
+    </form>
+</div>

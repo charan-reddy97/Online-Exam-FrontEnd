@@ -1,0 +1,19 @@
+<div class="container-fluid vh-100 bg-dark p-5">
+    <div class="row mx-5">
+        <div class="col">
+            <ul class="list-group">
+                <li class="list-group-item" *ngFor="let b of questionBanks">
+                    <div class="row">
+                        <div class="col-10">
+                            {{b.qTitle}}
+                        </div>
+                        <div class="col-2">
+                            <a [routerLink]="['/exam',b.id]" class="btn btn-primary">Take Test</a>
+                        </div>
+                    </div>
+                     
+                </li>   
+            </ul>
+        </div>
+    </div>
+</div>

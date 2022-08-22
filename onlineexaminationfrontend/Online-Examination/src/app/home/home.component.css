@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 0;
+}
+header{
+    background-image: url(https://png.pngtree.com/background/20211215/original/pngtree-countdown-to-the-college-entrance-examination-picture-image_1478864.jpg);
+    height: 100vh;
+    background-size: cover;
+}
+ul{
+    float: right;
+    list-style-type: none;
+    margin-top: 25px;
+}ul li{
+    display: inline-block;
+}
+ul li a{
+    text-decoration: none;
+    color: rgb(240, 255, 250);
+    padding: 5px 20px;
+    border: 1px solid rgb(255, 255, 255);
+    transition: 0.6s ease;
+
+}
+ul li a:hover{
+    background-color: rgb(165, 42, 106);
+}
+ul li.active a{
+    background-color: rgb(165, 42, 106);
+}
+.logo img{
+float: left;
+width: 150px;
+height: auto;
+margin-top: 25px;
+}
+.main{
+    max-width: 1200px;
+    margin: auto;
+}
+.title{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.title{
+    color: azure;
+    font-size: small;
+}
+.button{
+    position: absolute;
+    top:60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.btn{
+    text-decoration: none;
+    color: rgb(255, 240, 252);
+    padding: 5px 20px;
+    border: 1px solid rgb(255, 255, 255);
+    transition: 0.6s ease;
+}
+.btn :hover{
+    background-color:rgb(206, 182, 197);
+}

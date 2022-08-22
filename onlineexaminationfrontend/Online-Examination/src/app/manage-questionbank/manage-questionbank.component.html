@@ -1,0 +1,52 @@
+
+<div class="container">
+    <h1>Manage Question Bank</h1>
+    <table class="table">
+        <tr>
+            <td>
+                <label>Question Bank Number</label>
+                <input type="text" class="form-control" [(ngModel)]="currentQuestionBank.qNum"/>
+            </td>
+            <td>
+                <label>Title</label>
+                <input type="text" class="form-control" [(ngModel)]="currentQuestionBank.qTitle"/>
+            </td>
+            <td>
+                <label>Total Questios</label>
+                <input type="number" value="0" class="form-control" [(ngModel)]="currentQuestionBank.totalQuestions"/>
+            </td>
+            <td>
+                <label></label> <br />
+                <button type="button" class="btn btn-primary" (click)="onSaveQuestionBank()">Add</button>
+            </td>
+        </tr>
+    </table>
+    <hr />
+    <h1>Existing Question Banks</h1>
+    <table class="table">
+        <thead>
+           <tr>
+            <th>Question Bank No</th>
+            <th>Title</th>
+            <th>Total Questions</th>
+            <th></th>
+           </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let b of questionBanks">
+                <td>
+                    {{b.qNum}}
+                </td>
+                <td>
+                    {{b.qTitle}}
+                </td>
+                <td>
+                    {{b.totalQuestions}}
+                </td>
+                <td>
+                    <a [routerLink]="['/editquestionbank',b.id]">Edit Questions</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

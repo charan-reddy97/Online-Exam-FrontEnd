@@ -1,0 +1,70 @@
+<div class="container">
+    <h1>Question Bank</h1>
+    <h1 class="text-primary">{{questionBank?.qTitle}}</h1>
+    <hr />
+    <h1>Questions</h1>
+    <div class="card">
+        <div class="card-header">
+            <input type="text" placeholder="Enter a new question" class="form-control" [(ngModel)]="currentQuestion.questions" />
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-11">
+                    <input type="text" placeholder="Option 1" class="form-control" [(ngModel)]="currentQuestion.options[0].title" />
+                </div>
+                <div class="col-1">
+                    <input type="checkbox" placeholder="Option 1"  class="form-check-input" [(ngModel)]="currentQuestion.options[0].isCorrectAns" /> Is Answer
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-11">
+                    <input type="text" placeholder="Option 2" class="form-control" [(ngModel)]="currentQuestion.options[1].title" />
+                </div>
+                <div class="col-1">
+                    <input type="checkbox" placeholder="Option 2"  class="form-check-input" [(ngModel)]="currentQuestion.options[1].isCorrectAns" /> Is Answer
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-11">
+                    <input type="text" placeholder="Option 3" class="form-control" [(ngModel)]="currentQuestion.options[2].title" />
+                </div>
+                <div class="col-1">
+                    <input type="checkbox" placeholder="Option 3"  class="form-check-input" [(ngModel)]="currentQuestion.options[2].isCorrectAns" /> Is Answer
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-11">
+                    <input type="text" placeholder="Option 4" class="form-control" [(ngModel)]="currentQuestion.options[3].title" />
+                </div>
+                <div class="col-1">
+                    <input type="checkbox" placeholder="Option 4"  class="form-check-input" [(ngModel)]="currentQuestion.options[3].isCorrectAns" /> Is Answer
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            <div class="float-end">
+                <button type="button" class="btn btn-primary" (click)="onSaveCurrentQuestion()">Save</button>
+            </div>
+        </div>
+    </div>
+    <h1></h1>
+    <h1>Current Questions</h1>
+    <div *ngFor="let q of questionBank?.questions1">
+        <div class="card mb-3">
+            <div class="card-header">
+                {{q.questions}}
+            </div>
+            <div card-body>
+                <ul class="list-group">
+                    <li *ngFor="let o of q.options" class="list-group-item">
+                        {{o.title}}
+                        <span *ngIf="o.isCorrectAns" class="ms-5">
+                            <strong class="text-success">ANSWER</strong>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+</div>

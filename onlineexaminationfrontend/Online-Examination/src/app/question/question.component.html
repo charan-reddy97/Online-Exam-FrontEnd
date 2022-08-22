@@ -1,0 +1,16 @@
+<h1>Available Question</h1>
+
+
+<ul>
+    <li *ngFor="let q of questions" >
+       
+        {{q.id}}
+        {{q.qNo}} )
+        <a [routerLink]="['/options',q.id]"> {{q.questions}}  </a>  
+
+        <br/>
+        <br>
+        
+    </li>
+</ul> 
+
